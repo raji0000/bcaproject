@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - CyberSec Academy</title>
+    <meta name="description" content="Create your CyberSec Academy account to start learning cybersecurity.">
+    <link rel="stylesheet" href="assets/css/globals.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
+    <link rel="icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">
+                    <img src="/placeholder.svg?height=40&width=40" alt="CyberSec Academy" class="logo-img">
+                    <span class="logo-text">CyberSec Academy</span>
+                </a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="courses.html" class="nav-link">Courses</a></li>
+                <li><a href="ctf.html" class="nav-link">CTF Challenges</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline">Sign In</a>
+                <a href="index.html" class="btn btn-primary">Home</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Registration Form Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-header">
+                    <h1 class="auth-title">Join CyberSec Academy</h1>
+                    <p class="auth-subtitle">Start your cybersecurity journey today</p>
+                </div>
+
+                <form class="auth-form" id="registerForm" action="auth/register.php" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input 
+                                type="text" 
+                                id="firstName" 
+                                name="first_name" 
+                                class="form-input" 
+                                required 
+                                autocomplete="given-name"
+                                placeholder="Enter your first name"
+                            >
+                            <span class="form-error" id="firstNameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input 
+                                type="text" 
+                                id="lastName" 
+                                name="last_name" 
+                                class="form-input" 
+                                required 
+                                autocomplete="family-name"
+                                placeholder="Enter your last name"
+                            >
+                            <span class="form-error" id="lastNameError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="username" class="form-label">Username</label>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            name="username" 
+                            class="form-input" 
+                            required 
+                            autocomplete="username"
+                            placeholder="Choose a username"
+                            pattern="[a-zA-Z0-9_]{3,20}"
+                            title="Username must be 3-20 characters long and contain only letters, numbers, and underscores"
+                        >
+                        <span class="form-error" id="usernameError"></span>
+                        <span class="form-help">3-20 characters, letters, numbers, and underscores only</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="form-input" 
+                            required 
+                            autocomplete="email"
+                            placeholder="Enter your email"
+                        >
+                        <span class="form-error" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="password-input-container">
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                class="form-input" 
+                                required 
+                                autocomplete="new-password"
+                                placeholder="Create a strong password"
+                            >
+                            <button type="button" class="password-toggle" id="passwordToggle" aria-label="Toggle password visibility">
+                                <span class="password-toggle-icon">👁️</span>
+                            </button>
+                        </div>
+                        <span class="form-error" id="passwordError"></span>
+                        <div class="password-strength" id="passwordStrength">
+                            <div class="strength-bar">
+                                <div class="strength-fill" id="strengthFill"></div>
+                            </div>
+                            <span class="strength-text" id="strengthText">Password strength</span>
+                        </div>
+                        <span class="form-help">At least 8 characters with uppercase, lowercase, and numbers</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <div class="password-input-container">
+                            <input 
+                                type="password" 
+                                id="confirmPassword" 
+                                name="confirm_password" 
+                                class="form-input" 
+                                required 
+                                autocomplete="new-password"
+                                placeholder="Confirm your password"
+                            >
+                            <button type="button" class="password-toggle" id="confirmPasswordToggle" aria-label="Toggle password visibility">
+                                <span class="password-toggle-icon">👁️</span>
+                            </button>
+                        </div>
+                        <span class="form-error" id="confirmPasswordError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="terms" class="checkbox-input" required>
+                            <span class="checkbox-custom"></span>
+                            I agree to the <a href="terms.html" target="_blank" class="auth-link">Terms of Service</a> and <a href="privacy.html" target="_blank" class="auth-link">Privacy Policy</a>
+                        </label>
+                        <span class="form-error" id="termsError"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary auth-submit" id="registerButton">
+                        <span class="button-text">Create Account</span>
+                        <span class="button-spinner" style="display: none;">
+                            <img src="/placeholder.svg?height=20&width=20" alt="Loading..." class="spinner">
+                        </span>
+                    </button>
+
+                    <div class="auth-divider">
+                        <span>or</span>
+                    </div>
+
+                    <div class="social-login">
+                        <button type="button" class="btn btn-outline social-btn">
+                            <img src="/placeholder.svg?height=20&width=20" alt="Google" class="social-icon">
+                            Continue with Google
+                        </button>
+                        <button type="button" class="btn btn-outline social-btn">
+                            <img src="/placeholder.svg?height=20&width=20" alt="GitHub" class="social-icon">
+                            Continue with GitHub
+                        </button>
+                    </div>
+                </form>
+
+                <div class="auth-footer">
+                    <p>Already have an account? <a href="login.html" class="auth-link">Sign in here</a></p>
+                </div>
+
+                <!-- Alert Messages -->
+                <div class="alert alert-error" id="errorAlert" style="display: none;">
+                    <span class="alert-message" id="errorMessage"></span>
+                    <button class="alert-close" id="closeError">&times;</button>
+                </div>
+
+                <div class="alert alert-success" id="successAlert" style="display: none;">
+                    <span class="alert-message" id="successMessage"></span>
+                    <button class="alert-close" id="closeSuccess">&times;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/auth.js"></script>
+</body>
+</html>

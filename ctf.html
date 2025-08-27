@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Challenges - CyberSec Academy</title>
+    <meta name="description" content="Test your cybersecurity skills with hands-on Capture The Flag challenges across multiple categories.">
+    <link rel="stylesheet" href="assets/css/globals.css">
+    <link rel="stylesheet" href="assets/css/ctf.css">
+    <link rel="icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">
+                    <img src="/placeholder.svg?height=40&width=40" alt="CyberSec Academy" class="logo-img">
+                    <span class="logo-text">CyberSec Academy</span>
+                </a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="courses.html" class="nav-link">Courses</a></li>
+                <li><a href="ctf.html" class="nav-link active">CTF Challenges</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="scoreboard.php" class="btn btn-outline">Leaderboard</a>
+                <a href="login.html" class="btn btn-primary">Login</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- CTF Hero -->
+    <section class="ctf-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title text-balance">Capture The Flag Challenges</h1>
+                <p class="hero-subtitle">Test your cybersecurity skills with hands-on challenges designed to simulate real-world scenarios. From web exploitation to cryptography, sharpen your abilities and climb the leaderboard.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Challenges</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Categories</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5,000+</span>
+                        <span class="stat-label">Players</span>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a href="#challenges" class="btn btn-primary">Start Challenges</a>
+                    <a href="scoreboard.php" class="btn btn-outline">View Leaderboard</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section" id="challenges">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Challenge Categories</h2>
+                <p class="section-subtitle">Choose your specialty and start solving challenges</p>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-card card" data-category="web">
+                    <div class="category-icon">
+                        <img src="/placeholder.svg?height=48&width=48" alt="Web Security">
+                    </div>
+                    <h3 class="category-title">Web Security</h3>
+                    <p class="category-description">Exploit web application vulnerabilities including XSS, SQL injection, CSRF, and more.</p>
+                    <div class="category-stats">
+                        <span class="challenge-count">45 challenges</span>
+                        <span class="difficulty-range">Easy - Expert</span>
+                    </div>
+                    <button class="btn btn-primary category-btn" data-category="web">View Challenges</button>
+                </div>
+
+                <div class="category-card card" data-category="forensics">
+                    <div class="category-icon">
+                        <img src="/placeholder.svg?height=48&width=48" alt="Digital Forensics">
+                    </div>
+                    <h3 class="category-title">Digital Forensics</h3>
+                    <p class="category-description">Investigate digital evidence, analyze files, and uncover hidden information.</p>
+                    <div class="category-stats">
+                        <span class="challenge-count">38 challenges</span>
+                        <span class="difficulty-range">Easy - Expert</span>
+                    </div>
+                    <button class="btn btn-primary category-btn" data-category="forensics">View Challenges</button>
+                </div>
+
+                <div class="category-card card" data-category="cryptography">
+                    <div class="category-icon">
+                        <img src="/placeholder.svg?height=48&width=48" alt="Cryptography">
+                    </div>
+                    <h3 class="category-title">Cryptography</h3>
+                    <p class="category-description">Break ciphers, analyze encryption algorithms, and solve cryptographic puzzles.</p>
+                    <div class="category-stats">
+                        <span class="challenge-count">52 challenges</span>
+                        <span class="difficulty-range">Easy - Expert</span>
+                    </div>
+                    <button class="btn btn-primary category-btn" data-category="cryptography">View Challenges</button>
+                </div>
+
+                <div class="category-card card" data-category="pwn">
+                    <div class="category-icon">
+                        <img src="/placeholder.svg?height=48&width=48" alt="Binary Exploitation">
+                    </div>
+                    <h3 class="category-title">Binary Exploitation</h3>
+                    <p class="category-description">Exploit binary vulnerabilities, buffer overflows, and reverse engineering challenges.</p>
+                    <div class="category-stats">
+                        <span class="challenge-count">29 challenges</span>
+                        <span class="difficulty-range">Medium - Expert</span>
+                    </div>
+                    <button class="btn btn-primary category-btn" data-category="pwn">View Challenges</button>
+                </div>
+
+                <div class="category-card card" data-category="osint">
+                    <div class="category-icon">
+                        <img src="/placeholder.svg?height=48&width=48" alt="OSINT">
+                    </div>
+                    <h3 class="category-title">OSINT</h3>
+                    <p class="category-description">Open source intelligence gathering using publicly available information.</p>
+                    <div class="category-stats">
+                        <span class="challenge-count">34 challenges</span>
+                        <span class="difficulty-range">Easy - Hard</span>
+                    </div>
+                    <button class="btn btn-primary category-btn" data-category="osint">View Challenges</button>
+                </div>
+
+                <div class="category-card card" data-category="api">
+                    <div class="category-icon">
+                        <img src="/placeholder.svg?height=48&width=48" alt="API Security">
+                    </div>
+                    <h3 class="category-title">API Security</h3>
+                    <p class="category-description">Test API endpoints, authentication mechanisms, and data validation vulnerabilities.</p>
+                    <div class="category-stats">
+                        <span class="challenge-count">27 challenges</span>
+                        <span class="difficulty-range">Easy - Hard</span>
+                    </div>
+                    <button class="btn btn-primary category-btn" data-category="api">View Challenges</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges List -->
+    <section class="challenges-section" id="challengesList" style="display: none;">
+        <div class="container">
+            <div class="challenges-header">
+                <button class="back-btn" id="backBtn">
+                    <img src="/placeholder.svg?height=20&width=20" alt="Back">
+                    Back to Categories
+                </button>
+                <h2 class="challenges-title" id="challengesTitle">Web Security Challenges</h2>
+                <div class="challenges-filters">
+                    <select class="difficulty-filter" id="difficultyFilter">
+                        <option value="all">All Difficulties</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                        <option value="expert">Expert</option>
+                    </select>
+                    <input type="text" class="search-input" placeholder="Search challenges..." id="challengeSearch">
+                </div>
+            </div>
+
+            <div class="challenges-grid" id="challengesGrid">
+                <!-- Challenges will be loaded here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Activity -->
+    <section class="activity-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Recent Activity</h2>
+                <a href="scoreboard.php" class="view-all-link">View Full Leaderboard</a>
+            </div>
+            
+            <div class="activity-grid">
+                <div class="activity-card card">
+                    <div class="activity-header">
+                        <img src="/placeholder.svg?height=32&width=32" alt="User" class="user-avatar">
+                        <div class="activity-info">
+                            <span class="username">alex_hacker</span>
+                            <span class="activity-time">2 minutes ago</span>
+                        </div>
+                        <span class="points-earned">+150 pts</span>
+                    </div>
+                    <div class="activity-content">
+                        <span class="activity-text">Solved</span>
+                        <a href="challenge.php?id=1" class="challenge-link">Basic SQL Injection</a>
+                        <span class="category-tag web">Web</span>
+                    </div>
+                </div>
+
+                <div class="activity-card card">
+                    <div class="activity-header">
+                        <img src="/placeholder.svg?height=32&width=32" alt="User" class="user-avatar">
+                        <div class="activity-info">
+                            <span class="username">crypto_master</span>
+                            <span class="activity-time">5 minutes ago</span>
+                        </div>
+                        <span class="points-earned">+50 pts</span>
+                    </div>
+                    <div class="activity-content">
+                        <span class="activity-text">Solved</span>
+                        <a href="challenge.php?id=2" class="challenge-link">Caesar Cipher</a>
+                        <span class="category-tag cryptography">Crypto</span>
+                    </div>
+                </div>
+
+                <div class="activity-card card">
+                    <div class="activity-header">
+                        <img src="/placeholder.svg?height=32&width=32" alt="User" class="user-avatar">
+                        <div class="activity-info">
+                            <span class="username">forensics_pro</span>
+                            <span class="activity-time">8 minutes ago</span>
+                        </div>
+                        <span class="points-earned">+200 pts</span>
+                    </div>
+                    <div class="activity-content">
+                        <span class="activity-text">Solved</span>
+                        <a href="challenge.php?id=3" class="challenge-link">Hidden in Plain Sight</a>
+                        <span class="category-tag forensics">Forensics</span>
+                    </div>
+                </div>
+
+                <div class="activity-card card">
+                    <div class="activity-header">
+                        <img src="/placeholder.svg?height=32&width=32" alt="User" class="user-avatar">
+                        <div class="activity-info">
+                            <span class="username">pwn_ninja</span>
+                            <span class="activity-time">12 minutes ago</span>
+                        </div>
+                        <span class="points-earned">+300 pts</span>
+                    </div>
+                    <div class="activity-content">
+                        <span class="activity-text">Solved</span>
+                        <a href="challenge.php?id=4" class="challenge-link">Buffer Overflow Basics</a>
+                        <span class="category-tag pwn">Pwn</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title text-balance">Ready to Test Your Skills?</h2>
+                <p class="cta-subtitle">Join thousands of cybersecurity enthusiasts competing in our CTF challenges. Start solving and climb the leaderboard!</p>
+                <div class="cta-actions">
+                    <a href="register.html" class="btn btn-primary">Join the Competition</a>
+                    <a href="scoreboard.php" class="btn btn-outline">View Leaderboard</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <a href="index.html" class="logo">
+                            <img src="/placeholder.svg?height=32&width=32" alt="CyberSec Academy" class="logo-img">
+                            <span class="logo-text">CyberSec Academy</span>
+                        </a>
+                        <p class="footer-description">Empowering the next generation of cybersecurity professionals through hands-on learning and real-world challenges.</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Learn</h4>
+                    <ul class="footer-links">
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="ctf.html">CTF Challenges</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#">Certifications</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Community</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">Forums</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="scoreboard.php">Leaderboard</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2024 CyberSec Academy. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <img src="/placeholder.svg?height=20&width=20" alt="Twitter">
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <img src="/placeholder.svg?height=20&width=20" alt="LinkedIn">
+                    </a>
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <img src="/placeholder.svg?height=20&width=20" alt="GitHub">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/ctf.js"></script>
+</body>
+</html>

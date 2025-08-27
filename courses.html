@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Courses - CyberSec Academy</title>
+    <meta name="description" content="Explore our comprehensive cybersecurity courses from beginner to advanced levels.">
+    <link rel="stylesheet" href="assets/css/globals.css">
+    <link rel="stylesheet" href="assets/css/courses.css">
+    <link rel="icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">
+                    <img src="/placeholder.svg?height=40&width=40" alt="CyberSec Academy" class="logo-img">
+                    <span class="logo-text">CyberSec Academy</span>
+                </a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="courses.html" class="nav-link active">Courses</a></li>
+                <li><a href="ctf.html" class="nav-link">CTF Challenges</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Join Now</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="courses-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title text-balance">Master Cybersecurity Through Expert-Led Courses</h1>
+                <p class="hero-subtitle">From fundamentals to advanced techniques, our structured learning paths will take you from beginner to cybersecurity professional.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Courses</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Hours of Content</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10,000+</span>
+                        <span class="stat-label">Students</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="courses-filters">
+        <div class="container">
+            <div class="filters-header">
+                <h2 class="filters-title">Find Your Perfect Course</h2>
+                <div class="results-count" id="resultsCount">Showing all courses</div>
+            </div>
+            
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label class="filter-label">Difficulty Level</label>
+                    <div class="filter-options">
+                        <button class="filter-btn active" data-filter="all" data-type="difficulty">All Levels</button>
+                        <button class="filter-btn" data-filter="beginner" data-type="difficulty">Beginner</button>
+                        <button class="filter-btn" data-filter="intermediate" data-type="difficulty">Intermediate</button>
+                        <button class="filter-btn" data-filter="advanced" data-type="difficulty">Advanced</button>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <label class="filter-label">Duration</label>
+                    <div class="filter-options">
+                        <button class="filter-btn active" data-filter="all" data-type="duration">Any Duration</button>
+                        <button class="filter-btn" data-filter="short" data-type="duration">Under 5 hours</button>
+                        <button class="filter-btn" data-filter="medium" data-type="duration">5-15 hours</button>
+                        <button class="filter-btn" data-filter="long" data-type="duration">15+ hours</button>
+                    </div>
+                </div>
+                
+                <div class="search-group">
+                    <input type="text" class="search-input" placeholder="Search courses..." id="courseSearch">
+                    <button class="search-btn" id="searchBtn">
+                        <img src="/placeholder.svg?height=20&width=20" alt="Search">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Grid -->
+    <section class="courses-section">
+        <div class="container">
+            <div class="courses-grid" id="coursesGrid">
+                <!-- Course cards will be loaded here -->
+                <div class="course-card card" data-difficulty="beginner" data-duration="8">
+                    <img src="/placeholder.svg?height=200&width=350" alt="Introduction to Cybersecurity" class="course-image">
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="course-level beginner">Beginner</span>
+                            <span class="course-duration">8 hours</span>
+                        </div>
+                        <h3 class="course-title">Introduction to Cybersecurity</h3>
+                        <p class="course-description">Learn the fundamentals of cybersecurity including common threats, defense strategies, and security principles that form the foundation of information security.</p>
+                        <div class="course-features">
+                            <div class="feature">
+                                <img src="/placeholder.svg?height=16&width=16" alt="Lessons">
+                                <span>12 Lessons</span>
+                            </div>
+                            <div class="feature">
+                                <img src="/placeholder.svg?height=16&width=16" alt="Certificate">
+                                <span>Certificate</span>
+                            </div>
+                            <div class="feature">
+                                <img src="/placeholder.svg?height=16&width=16" alt="Lifetime Access">
+                                <span>Lifetime Access</span>
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-stats">
+                                <span class="course-students">2,500+ students</span>
+                                <div class="course-rating">
+                                    <span class="rating-stars">★★★★★</span>
+                                    <span class="rating-score">4.8</span>
+                                </div>
+                            </div>
+                            <a href="course-detail.php?id=1" class="btn btn-primary">View Course</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card card" data-difficulty="intermediate" data-duration="12">
+                    <img src="/placeholder.svg?height=200&width=350" alt="Web Application Security" class="course-image">
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="course-level intermediate">Intermediate</span>
+                            <span class="course-duration">12 hours</span>
+                        </div>
+                        <h3 class="course-title">Web Application Security</h3>
+                        <p class="course-description">Deep dive into web application vulnerabilities like XSS, SQL injection, CSRF attacks, and learn how to identify and prevent them in real applications.</p>
+                        <div class="course-features">
+                            <div class="feature">
+                                <img src="/placeholder.svg?height=16&width=16" alt="Lessons">
+                                <span>18 Lessons</span>
+                            </div>
+                            <div class="feature">
+                                <img src="/placeholder.svg?height=16&width=16" alt="Hands-on Labs">
+                                <span>Hands-on Labs</span>
+                            </div>
+                            <div class="feature">
+                                <img src="/placeholder.svg?height=16&width=16" alt="Certificate">
+                                <span>Certificate</span>
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-stats">
+                                <span class="course-students">1,800+ students</span>
+                                <div class="course-rating">
+                                    <span class="rating-stars">★★★★★</span>
+                                    <span class="rating-score">4.9</span>
+                                </div>
+                            </div>
+                            <a href="course-detail.php?id=2" class="btn btn-primary">View Course</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card card" data-difficulty="intermediate" data-duration="10">
+                    <img src="/placeholder.svg?height=200&width=350" alt="Network Security Fundamentals" class="course-image">
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="course-level intermediate">Intermediate</span>
+                            <span class="course-duration">10 hours</span>
+                        </div>
+                        <h3 class="course-title">Network Security Fundamentals</h3>
+                        <p class="course-description">Understanding network protocols, firewalls, intrusion detection systems, and how to secure network infrastructure against attacks.</p>
+                        <div class="course-features">
+                            <div class="feature">
+                                <img src="/placeholder.svg?height=16&width=16" alt="Lessons">
+                                <span>15 Lessons</span>
+                            </div>
+                            <div class="feature">
+                                <img src="/placeholder.svg?height=16&width=16" alt="Virtual Labs">
+                                <span>Virtual Labs</span>
+                            </div>
+                            <div class="feature">
+                                <img src="/placeholder.svg?height=16&width=16" alt="Certificate">
+                                <span>Certificate</span>
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-stats">
+                                <span class="course-students">1,500+ students</span>
+                                <div class="course-rating">
+                                    <span class="rating-stars">★★★★☆</span>
+                                    <span class="rating-score">4.7</span>
+                                </div>
+                            </div>
+                            <a href="course-detail.php?id=3" class="btn btn-primary">View Course</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card card" data-difficulty="advanced" data-duration="15">
+                    <img src="/placeholder.svg?height=200&width=350" alt="Ethical Hacking Basics" class="course-image">
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="course-level advanced">Advanced</span>
+                            <span class="course-duration">15 hours</span>
+                        </div>
+                        <h3 class="course-title">Ethical Hacking Basics</h3>
+                        <p class="course-description">Learn penetration testing methodologies, ethical hacking techniques, and how to conduct security assessments professionally.</p>
+                        <div class="course-features">
+                            <div class="feature">
+                                <img src="/placeholder.svg?height=16&width=16" alt="Lessons">
+                                <span>22 Lessons</span>
+                            </div>
+                            <div class="feature">
+                                <img src="/placeholder.svg?height=16&width=16" alt="Real-world Projects">
+                                <span>Real-world Projects</span>
+                            </div>
+                            <div class="feature">
+                                <img src="/placeholder.svg?height=16&width=16" alt="Certificate">
+                                <span>Certificate</span>
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-stats">
+                                <span class="course-students">1,200+ students</span>
+                                <div class="course-rating">
+                                    <span class="rating-stars">★★★★★</span>
+                                    <span class="rating-score">4.9</span>
+                                </div>
+                            </div>
+                            <a href="course-detail.php?id=4" class="btn btn-primary">View Course</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card card" data-difficulty="beginner" data-duration="6">
+                    <img src="/placeholder.svg?height=200&width=350" alt="Cryptography Essentials" class="course-image">
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="course-level beginner">Beginner</span>
+                            <span class="course-duration">6 hours</span>
+                        </div>
+                        <h3 class="course-title">Cryptography Essentials</h3>
+                        <p class="course-description">Understand the fundamentals of cryptography, encryption algorithms, digital signatures, and how cryptography protects data.</p>
+                        <div class="course-features">
+                            <div class="feature">
+                                <img src="/placeholder.svg?height=16&width=16" alt="Lessons">
+                                <span>10 Lessons</span>
+                            </div>
+                            <div class="feature">
+                                <img src="/placeholder.svg?height=16&width=16" alt="Interactive Examples">
+                                <span>Interactive Examples</span>
+                            </div>
+                            <div class="feature">
+                                <img src="/placeholder.svg?height=16&width=16" alt="Certificate">
+                                <span>Certificate</span>
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-stats">
+                                <span class="course-students">2,100+ students</span>
+                                <div class="course-rating">
+                                    <span class="rating-stars">★★★★☆</span>
+                                    <span class="rating-score">4.6</span>
+                                </div>
+                            </div>
+                            <a href="course-detail.php?id=5" class="btn btn-primary">View Course</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card card" data-difficulty="advanced" data-duration="20">
+                    <img src="/placeholder.svg?height=200&width=350" alt="Incident Response & Digital Forensics" class="course-image">
+                    <div class="course-content">
+                        <div class="course-meta">
+                            <span class="course-level advanced">Advanced</span>
+                            <span class="course-duration">20 hours</span>
+                        </div>
+                        <h3 class="course-title">Incident Response & Digital Forensics</h3>
+                        <p class="course-description">Master incident response procedures, digital forensics techniques, and learn how to investigate security breaches and cyber attacks.</p>
+                        <div class="course-features">
+                            <div class="feature">
+                                <img src="/placeholder.svg?height=16&width=16" alt="Lessons">
+                                <span>25 Lessons</span>
+                            </div>
+                            <div class="feature">
+                                <img src="/placeholder.svg?height=16&width=16" alt="Case Studies">
+                                <span>Real Case Studies</span>
+                            </div>
+                            <div class="feature">
+                                <img src="/placeholder.svg?height=16&width=16" alt="Tools">
+                                <span>Professional Tools</span>
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-stats">
+                                <span class="course-students">800+ students</span>
+                                <div class="course-rating">
+                                    <span class="rating-stars">★★★★★</span>
+                                    <span class="rating-score">4.8</span>
+                                </div>
+                            </div>
+                            <a href="course-detail.php?id=6" class="btn btn-primary">View Course</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-section">
+                <button class="btn btn-outline load-more-btn" id="loadMoreBtn">Load More Courses</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title text-balance">Ready to Start Learning?</h2>
+                <p class="cta-subtitle">Join thousands of students who are already building their cybersecurity careers with our expert-led courses.</p>
+                <div class="cta-actions">
+                    <a href="register.html" class="btn btn-primary">Get Started Free</a>
+                    <a href="about.html" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <a href="index.html" class="logo">
+                            <img src="/placeholder.svg?height=32&width=32" alt="CyberSec Academy" class="logo-img">
+                            <span class="logo-text">CyberSec Academy</span>
+                        </a>
+                        <p class="footer-description">Empowering the next generation of cybersecurity professionals through hands-on learning and real-world challenges.</p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Learn</h4>
+                    <ul class="footer-links">
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="ctf.html">CTF Challenges</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#">Certifications</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Community</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">Forums</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Leaderboard</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2024 CyberSec Academy. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <img src="/placeholder.svg?height=20&width=20" alt="Twitter">
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <img src="/placeholder.svg?height=20&width=20" alt="LinkedIn">
+                    </a>
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <img src="/placeholder.svg?height=20&width=20" alt="GitHub">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/courses.js"></script>
+</body>
+</html>

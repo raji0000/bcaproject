@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CyberSec Academy</title>
+    <meta name="description" content="Login to your CyberSec Academy account to access courses and CTF challenges.">
+    <link rel="stylesheet" href="assets/css/globals.css">
+    <link rel="stylesheet" href="assets/css/auth.css">
+    <link rel="icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">
+                    <img src="/placeholder.svg?height=40&width=40" alt="CyberSec Academy" class="logo-img">
+                    <span class="logo-text">CyberSec Academy</span>
+                </a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="courses.html" class="nav-link">Courses</a></li>
+                <li><a href="ctf.html" class="nav-link">CTF Challenges</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="register.html" class="btn btn-outline">Sign Up</a>
+                <a href="index.html" class="btn btn-primary">Home</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Login Form Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-header">
+                    <h1 class="auth-title">Welcome Back</h1>
+                    <p class="auth-subtitle">Sign in to continue your cybersecurity journey</p>
+                </div>
+
+                <form class="auth-form" id="loginForm" action="auth/login.php" method="POST">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="form-input" 
+                            required 
+                            autocomplete="email"
+                            placeholder="Enter your email"
+                        >
+                        <span class="form-error" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="password-input-container">
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                class="form-input" 
+                                required 
+                                autocomplete="current-password"
+                                placeholder="Enter your password"
+                            >
+                            <button type="button" class="password-toggle" id="passwordToggle" aria-label="Toggle password visibility">
+                                <span class="password-toggle-icon">👁️</span>
+                            </button>
+                        </div>
+                        <span class="form-error" id="passwordError"></span>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="remember_me" class="checkbox-input">
+                            <span class="checkbox-custom"></span>
+                            Remember me
+                        </label>
+                        <a href="forgot-password.html" class="forgot-link">Forgot password?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary auth-submit" id="loginButton">
+                        <span class="button-text">Sign In</span>
+                        <span class="button-spinner" style="display: none;">
+                            <img src="/placeholder.svg?height=20&width=20" alt="Loading..." class="spinner">
+                        </span>
+                    </button>
+
+                    <div class="auth-divider">
+                        <span>or</span>
+                    </div>
+
+                    <div class="social-login">
+                        <button type="button" class="btn btn-outline social-btn">
+                            <img src="/placeholder.svg?height=20&width=20" alt="Google" class="social-icon">
+                            Continue with Google
+                        </button>
+                        <button type="button" class="btn btn-outline social-btn">
+                            <img src="/placeholder.svg?height=20&width=20" alt="GitHub" class="social-icon">
+                            Continue with GitHub
+                        </button>
+                    </div>
+                </form>
+
+                <div class="auth-footer">
+                    <p>Don't have an account? <a href="register.html" class="auth-link">Sign up here</a></p>
+                </div>
+
+                <!-- Alert Messages -->
+                <div class="alert alert-error" id="errorAlert" style="display: none;">
+                    <span class="alert-message" id="errorMessage"></span>
+                    <button class="alert-close" id="closeError">&times;</button>
+                </div>
+
+                <div class="alert alert-success" id="successAlert" style="display: none;">
+                    <span class="alert-message" id="successMessage"></span>
+                    <button class="alert-close" id="closeSuccess">&times;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/auth.js"></script>
+</body>
+</html>
